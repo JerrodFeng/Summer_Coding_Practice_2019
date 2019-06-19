@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!--
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../practice/d3.js"></script>
+    <script type="text/javascript">
+        var data=[10,3,13,19,15];
+
+        d3.select(".chart")
+            .selectAll("div")
+            .data(data)
+            .enter()
+            .append("div")
+            .style("width", function(d) { return d * 2 + "px"; })
+            .text(function(d) { return '$ ' + d; });
+    </script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="chart">
+
+</div>
+
+</body>
+</html>
+-->
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Learn D3.js</title>
+</head>
+<body>
+<h1>Bar Chart using D3.js</h1>
+
+<svg width="500" height="800" class="bar-chart"></svg>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
