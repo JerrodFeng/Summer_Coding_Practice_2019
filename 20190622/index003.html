@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coding Practice</title>
+    <script src="d3.js"></script>
+</head>
+<body>
+<!--<p>cat</p>-->
+<!--<p>pig</p>-->
+<!--<p>lalala</p>-->
+<!--<script>-->
+<!--    var dataset=[1,2,3,4,5];-->
+<!--    var p=d3.select('body')-->
+<!--        .selectAll('p')-->
+<!--    var update=p.data(dataset);-->
+<!--    //var enter=update.enter();-->
+
+<!--    update.text(function (d,i) {-->
+<!--        return "data"+d+"index"+i;-->
+<!--    })-->
+
+<!--    // var EnterAp=enter.append("p")-->
+<!--    //-->
+<!--    // EnterAp.text(function (d,a) {-->
+<!--    //     return "new data"+d+"index"+a;-->
+<!--    // })-->
+<!--</script>-->
+<p>dog</p>
+<p>cat</p>
+<p>pig</p>
+<p>rat</p>
+
+<script>
+    var dataset = [3,6];
+    var p = d3.select("body")
+        .selectAll("p");
+    var update = p.data(dataset)//绑定数据,并得到update部分
+    var exit = update.exit();//得到exit部分
+    //下面检验是否真的得到
+    //对于update的处理
+    update.text(function(d,i){
+        return "update: "+d+",index: "+i;
+    })
+    //对于exit的处理通常是删除 ，但在这里我并没有这么做
+    exit.text(function(d,i){
+        return "exit";
+    })
+</script>
+
+
+
+
+</body>
+</html>

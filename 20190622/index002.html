@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coding practice</title>
+    <script src="d3.js"></script>
+</head>
+<body>
+<p>cat</p>
+<p>pig</p>
+<script type="text/javascript">
+    var data=["a","b","c"]
+
+    var body=d3.select('body')
+        .selectAll("p")
+
+    body.datum(data)
+        .text(function(a,b){
+        return "animal"+b+"-------"+a;
+    })
+</script>
+
+</body>
+</html>
