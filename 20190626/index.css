@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.shell{
+    margin: 20px auto;
+    position: relative;
+    width: 299px;
+    height: 299px;
+    border: #00aa88 10px solid;
+    background: #FAFAFA;
+}
+.shell p{
+    position: absolute;
+    width: 99px;
+    height: 99px;
+    background: url(image.jpg) no-repeat 0 0;
+    cursor: pointer;
+}
+.bar{
+    margin: 0 auto;
+    width: 316px;
+}
+.bar span{
+    margin-right: 12px;
+    color: #F00;
+}
+#showall{
+    font-size:14px;
+    cursor:pointer;
+}
+#show{
+    background:url(image.jpg) no-repeat 0 0;
+}
+
