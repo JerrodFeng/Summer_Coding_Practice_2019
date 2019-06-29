@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="d3.js"></script>
+</head>
+<body>
+<svg style="background-color: #2bb673"></svg>
+
+
+<script>
+    var dataset=[50,60,15,80,120];
+    var margin={
+        top: 60,
+        bottom: 60,
+        left:20,
+        right:60
+    }
+    var height=20;
+    var svg=d3.select('body')
+        .select('svg')
+        .attr('height',800)
+        .attr('width',1000);
+
+    var g=svg.append('g')
+        .attr("transform","translate("+margin.left+","+margin.top+")")
+
+    var rect=g.selectAll('rect')
+        .data(dataset)
+        .enter()
+        .append('rect')
+        .attr('x',500)
+        .attr('y',function (d,i) {
+            return i*height;
+        })
+        .attr('height',height-10)
+        .attr('width',function (d,i) {
+            return d;
+        })
+        .attr('fill','red');
+
+
+
+
+
+</script>
+
+</body>
+</html>
