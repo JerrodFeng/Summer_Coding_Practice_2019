@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bar chart</title>
+    <script src="http://d3js.org/d3.v5.min.js"></script>
+</head>
+<body >
+<h1>Bar Chart</h1>
+<svg style="background-color: #2bb673"></svg>
+
+<script>
+    var data=[100,190,50,240,270];
+    var height=20;
+    var margin={
+        top: 60,
+        bottom: 60,
+        left:20,
+        right:60
+    }
+    var svg=d3.select('body')
+        .select("svg")
+        .attr("height",800)
+        .attr("width",1000)
+
+
+
+    var g=svg.append('g')
+        .attr("transform","translate("+margin.left+","+margin.top+")")
+
+    var rec=g.selectAll("rect")
+        .data(data)
+        .enter()
+        .append('rect')
+        //.attr("align","center")
+        .attr("x",10)
+        .attr("y",function (d,i) {
+            return i*height;
+        })
+        .attr("width",function (d,i) {
+            return d;
+        })
+        .attr("height",height-5)
+        .attr("fill","red")
+
+</script>
+
+
+</body>
+</html>

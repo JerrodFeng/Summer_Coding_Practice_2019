@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coding practice</title>
+    <script type="text/javascript" src="http://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+<p>dog</p>
+<p class="m">cat</p>
+<p id="a">pig</p>
+<p>rat</p>
+<script>
+    var dataset=[6,5,4,3,2,1];
+    var p=d3.select("body").selectAll("#a")
+    p.text("4am 必胜")
+
+    // var q=d3.select('body').selectAll('p').data(dataset)
+    // q.text(function (d,i) {
+    //     if(i==1){
+    //         d3.select(this).style("color","red");
+    //     }
+    //     return d;
+    // })
+
+    var q=d3.select("body")
+        .select(".m")
+        .remove();
+
+
+
+
+
+</script>
+
+</body>
+</html>
